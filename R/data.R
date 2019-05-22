@@ -10,12 +10,12 @@
 #'     \item{parentID}{ e.g. "862507"}
 #' }
 #' @usage data(ncbiTaxonNamesFull)
+#' @source ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
 "ncbiTaxonNamesFull"
 
 #' Phylogenetic profiles of Arthropoda taxon set
 #'
-#' Write the description here (what are the scores, how many taxa, how many 
-#' proteins - what are those proteins)
+#' Write the description here 
 #' @format A data frame with 5 columns and 54656 rows:
 #' \itemize{
 #'     \item{geneID}{Gene ID, e.g. "97421at6656"}
@@ -29,16 +29,14 @@
 
 #' FASTA sequences of Arthropoda data
 #'
-#' Write the description here (how many species, how many sequences, where can 
-#' one get the data)
+#' Write the description here 
 #' @format A AAStringSet object (package Biostrings)
 #' @usage data(arthropodaFasta)
 "arthropodaFasta"
 
 #' Protein domain annotations of Arthropoda data
 #'
-#' Write the description here (what are the scores, how many taxa, how many 
-#' proteins)
+#' Write the description here 
 #' @format A data frame with 8 columns and 869651 rows:
 #' \itemize{
 #'     \item{seedID}{Gene ID & its ortholog, e.g. 
@@ -57,8 +55,9 @@
 
 #' Phylogenetic profiles of AMPK-TOR taxon set
 #'
-#' Write the description here (what are the scores, how many taxa, how many 
-#' proteins - what are those proteins)
+#' Data frame contains the phylogenetic profiles of 147 proteins of the human 
+#' AMPK-TOR pathway across 83 species in the three domains of life. This data is
+#' part of the published study https://doi.org/10.1093/jxb/erw211.
 #' @format A data frame with 5 columns and 6535 rows:
 #' \itemize{
 #'     \item{geneID}{Gene ID, e.g. "ampk_ACACA"}
@@ -72,16 +71,17 @@
 
 #' FASTA sequences of AMPK-TOR data
 #'
-#' Write the description here (how many species, how many sequences, where can 
-#' one get the data)
+#' A list of fasta sequences (AAStringSet objects) for 6535 proteins of the 
+#' phylogenetic profiles. They include 147 human proteins that are part of the 
+#' human AMPK-TOR pathway and 6388 orthologous proteins in other 82 species.
 #' @format A AAStringSet object (package Biostrings)
 #' @usage data(ampkTorFasta)
 "ampkTorFasta"
 
 #' Protein domain annotations of AMPK-TOR data
-#'
-#' Write the description here (what are the scores, how many taxa, how many 
-#' proteins)
+#' 
+#' Data frame containing the domain annotation for all proteins in phylogenetic 
+#' profiles of the human AMPK-TOR pathways.
 #' @format A data frame with 5 columns and 133489 rows:
 #' \itemize{
 #'     \item{seedID}{Gene ID & its ortholog, e.g. 

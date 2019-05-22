@@ -1,7 +1,8 @@
 ---
-title: " Vignettte providing an overview of the data in PhyloProfileData"
+title: "Overview of the data in PhyloProfileData"
 author: "Hannah Mülbaier & Vinh Tran"
 date: "`r Sys.Date()`"
+package: PhyloProfileData
 output:
   BiocStyle::html_document:
     toc: true
@@ -11,45 +12,108 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-The MOFAdata package contains several data sets to be used
-for illustration pruposes in the R package MOFA. 
-Please refer to the vignettes in the MOFA package,
-where we explain in detail how MOFA can be trained on the data
-and how the resulting model is to be analysed.
+# Introduction
+The PhyloProfileData package contains the following data objects:
+
+1. A preprocessed NCBI taxonomy data required by PhyloProfile package, and
+
+2. Two experimental datasets to illustrate running and analysing phylogenetic 
+profiles with PhyloProfile.
 
 ```{r, warning=FALSE, message=FALSE}
-# library(MOFAdata)
+library(PhyloProfileData)
 ```
 
-In MOFAdata we store the following data objects to be used with MOFA:
+# Preprocessed NCBI taxonomy data
+The *PhyloProfile* package provides two unique features in comparison to other
+existing phylogenetic profiling tools. One of them the ability to rapidly change
+the resolution of the comparative analysis of proteins in individual species, to
+that acros classes, phyla or entire kingdoms by collapsing the input taxa into 
+the corresponding systematic ranks. The other feature is that, *PhyloProfile* 
+can automatically order the input taxa in increasing taxonomic distance from a 
+user-specified reference taxon. Furthermore, *PhyloProfile* can convert the 
+input taxon IDs into the scientific names for the presentation of the profiles,
+which enable a more informative picture than showing only the taxon IDs. 
 
-* Preprocessed data on 200 CLL patients with
-mRNA, methylation, drug response and mutation profiles [@cllpaper],
-used as input for MOFA in [@MOFApaper].
+Those features are only available when we link the taxon IDs in the input 
+phylogenetic profile with their full taxonomy information including the IDs and 
+the scientific names from the lowest systematic rank (e.g. `strain` or 
+`species`) up to the root of the species tree (e.g. `cellular organism`).
+
+There are packages that can get the NCBI taxonomy ranks and IDs for a given 
+taxon (such as *taxize*), however getting these information on the fly for a 
+large number of taxa and parsing them can be time consuming. Therefore we 
+provide a preprocessed taxonomy file for *PhyloProfile* that contains required 
+information for those related functions. 
 
 ```{r, warning=FALSE, message=FALSE}
 # Load data
-# import list with mRNA, Methylation, Drug Response and Mutation data. 
-# data("CLL_data") 
-# lapply(CLL_data, dim) 
-
-# Load sample metadata: Sex and Diagnosis
-# data("CLL_covariates")
-# head(CLL_covariates)
+data("ncbiTaxonNamesFull")
+head(ncbiTaxonNamesFull)
 ```
 
-* scMT data: Preprocessed data on 87 single cells [@angermueller2016parallel],
-profiled using single-cell methylation and transcriptome sequencing,
-used as input to MOFA in  [@MOFApaper].
+The preprocessed taxonomy file contains the NCBI taxonomy ID for each taxon, 
+their corresponding scientific name, the current systematic rank and the ID of 
+its higher rank (parent ID). These information were parsed from the `names.dmp`
+and `nodes.dmp` files downloaded from 
+ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip. This data contains 
+2.110.551 entries, correspond to the complete NCBI taxonomy database (Federhen, 
+2012) on May 13th 2019.
+
+# Experimental datasets
+
+## Phylogenetic profiles of AMPK-TOR pathway
+
+The phylogenetic profiles of 147 human proteins in the AMPK-TOR pathway across 
+83 species in the three domains of life were taken from the study of Roustan et 
+al. 2016. 
+
+This data set includes 3 files: 
+
+- A phylogenetic profile input contains the human protein IDs, the taxaonomy ID
+of the 83 search species and the corresponding orthologous protein IDs in those 
+species, together with two additional values, the forward and backward FAS 
+scores. FAS score is blablabla (please describe the FAS score here, with reference. 
+This info you also need for your thesis and project report)
 
 ```{r, warning=FALSE, message=FALSE}
-# data("scMT_data") 
-# scMT_data
+data("ampkTorPhyloProfile")
+head(ampkTorPhyloProfile)
 ```
 
-* other data include trained MOFA models for the above data sets
-as analysed in [@MOFApaper] and REACTOME gene set information
-[@fabregat2015reactome] to be used in the MOFA package
-for gene set enrichment analysis of trained models.
+- A multiple fasta object contains the FASTA sequences for all the proteins 
+present in the data set.
+
+```{r, warning=FALSE, message=FALSE}
+data("ampkTorFasta")
+head(ampkTorFasta)
+```
+
+- A data frame contains the domain annotation for the proteins present in 
+the phylogenetic profiles. The protein domain annotations were done using 
+different annotation tools and databases, such as *PFAM*, *SMART*, *CAST*, 
+*COILS2*, *SEG*, *SignalP*, and *TMHMM*. The annotation types together with 
+their domain name and the corresponding start and end positions are stored in 
+this domain data frame.
+
+```{r, warning=FALSE, message=FALSE}
+data("ampkTorDomain")
+head(ampkTorDomain)
+```
+
+
+## Phylogenetic profiles of Arthropoda proteins
+
+Because this data was not published, you should explain what can this data be 
+used for, or what is the purpose of your project to create this data. 
+For description of the 3 files, you can copy from the section above and edit the
+contain according to your need. You don't need to describe the FAS score again,
+just write something like "the same as the AMPK-TOR data set".
+If you got the fasta sequences from somewhere else (not mentions in the general 
+description), please make it clear when writing about the arthropodaFasta
 
 # References
+1. Federhen, S. (2012) The NCBI Taxonomy database. Nucleic Acids Res, 40, 
+D136–D143.
+2. Roustan, V. et al. (2016) An evolutionary perspective of AMPK–TOR signaling 
+in the three domains of life. Journal of Experimental Botany, 67 (13), 3897–3907
