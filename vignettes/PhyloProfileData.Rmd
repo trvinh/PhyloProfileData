@@ -1,5 +1,5 @@
 ---
-title: "Overview of the data in PhyloProfileData"
+title: "Overview of PhyloProfileData"
 author: "Hannah Mülbaier & Vinh Tran"
 date: "`r Sys.Date()`"
 package: PhyloProfileData
@@ -110,7 +110,8 @@ For description of the 3 files, you can copy from the section above and edit the
 contain according to your need. You don't need to describe the FAS score again,
 just write something like "the same as the AMPK-TOR data set".
 If you got the fasta sequences from somewhere else (not mentions in the general 
-description), please make it clear when writing about the arthropodaFasta
+description), please make it clear when writing about the arthropodaFasta.
+Please also remember to give references when needed (for example to BUSCO)
 
 # References
 1. Federhen, S. (2012) The NCBI Taxonomy database. Nucleic Acids Res, 40, 
