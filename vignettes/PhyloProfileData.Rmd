@@ -74,7 +74,8 @@ This data set includes 3 files:
 of the 83 search species and the corresponding orthologous protein IDs in those 
 species, together with two additional values, the forward and backward FAS 
 scores. FAS score is blablabla (please describe the FAS score here, with reference. 
-This info you also need for your thesis and project report)
+This info you also need for your thesis and project report(Could't find any
+paper or reference I could use to support my knowledge))
 
 ```{r, warning=FALSE, message=FALSE}
 data("ampkTorPhyloProfile")
@@ -104,18 +105,66 @@ head(ampkTorDomain)
 
 ## Phylogenetic profiles of Arthropoda proteins
 
-Because this data was not published, you should explain what can this data be 
-used for, or what is the purpose of your project to create this data. 
-For description of the 3 files, you can copy from the section above and edit the
-contain according to your need. You don't need to describe the FAS score again,
-just write something like "the same as the AMPK-TOR data set".
-If you got the fasta sequences from somewhere else (not mentions in the general 
-description), please make it clear when writing about the arthropodaFasta.
-Please also remember to give references when needed (for example to BUSCO)
-blablabla
+The phylogenetic profile of 1011 ortholog groups across 89 species 
+was calculated from the BUSCO arthropoda dataset published
+from Simão et al.2015. The BUSCO arthropoda dataset was downloaded from https://busco.ezlab.org/datasets/arthropoda_odb9.tar.gz in Jan. 2018. 
+
+HaMStR-OneSeq, a tool which predicts orthologs and compares their 
+Feature Architecture Similarity scores, bases the calculation on given 
+core-ortholog datasets. To make the application more flexible and customized
+due to the research question, the well known BUSCO datasets were transformed
+to the format required from HaMStR-OneSeq, so they can be used as core-orthologs.
+
+The BUSCO datasets mentioned above provided the information, which protein sequence
+belongs to which BUSCO ortholog group, and was used to download the protein 
+sequences from orthoDB version 10 (https://www.orthodb.org).
+Afterwards, the sequences of every ortholog group were filtered off 10 species 
+(Ladona fulva, Agrilus planipennis, Polypedilum vanderplanki, Daphnia magna, 
+Harpegnathos saltator, Zootermopsis nevadensis, Halyomorpha halys, 
+Heliconius melpomene, Stegodyphus mimosarum,Drosophila willistoni), the multiple
+sequence alignments were computed with *MUSCLE* and the pHMMs were calculated 
+with *HMMER3*. After the integration of these new groups as core-orthologs in 
+HaMStR-OneSeq and the integration of the new species datasets to the one 
+supplied by HaMStr, the phylogenetic profile was computed. 
+
+This datset includes 3 files:
+
+- A phylogenetic profile input contains the human protein IDs, the taxaonomy ID
+of the 89 searched species and the corresponding orthologous protein IDs in those 
+species, together with two additional values, the forward and backward FAS 
+scores which is descriped above in the description of the AMPK-TOR pathway.
+
+```{r, warning=FALSE, message=FALSE}
+data("arthropodaPhyloProfile")
+head(arthropodaPhyloProfile)
+```
+
+
+- A multiple fasta object contains the FASTA sequences for all the proteins 
+present in the data set.
+
+```{r, warning=FALSE, message=FALSE}
+data("arthropodaFasta")
+head(arthropodaFasta)
+```
+
+- A data frame contains the domain annotation for the proteins present in 
+the phylogenetic profiles. The protein domain annotations were done using 
+different annotation tools and databases, such as *PFAM*, *SMART*, *CAST*, 
+*COILS2*, *SEG*, *SignalP*, and *TMHMM*. The annotation types together with 
+their domain name and the corresponding start and end positions are stored in 
+this domain data frame.
+
+```{r, warning=FALSE, message=FALSE}
+data("arthropodaDomain")
+head(arthropodaDomain)
+```
 
 # References
 1. Federhen, S. (2012) The NCBI Taxonomy database. Nucleic Acids Res, 40, 
 D136–D143.
 2. Roustan, V. et al. (2016) An evolutionary perspective of AMPK–TOR signaling 
 in the three domains of life. Journal of Experimental Botany, 67 (13), 3897–3907
+3. Simão, F. et al. (2015) BUSCO: assessing genome assembly and annotation 
+completeness with single-copy orthologs. Bioinformatics published online June 9,
+2015
