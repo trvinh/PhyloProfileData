@@ -1,11 +1,11 @@
 Package: PhyloProfileData
 Type: Package
 Version: 0.99.0
-Date: 2019-05-22
+Date: 2019-05-23
 Title: Data package for phylogenetic profile analysis using PhyloProfile tool
 Author: Ingo Ebersberger, Arpit Jain, Hannah Mülbaier, Vinh Tran
 Maintainer: Vinh Tran <tran@bio.uni-frankfurt.de>
-Description: A preprocessed NCBI taxonomy data required by PhyloProfile package and two experimental datasets to illustrate running and analysing phylogenetic profiles with PhyloProfile.
+Description: A preprocessed NCBI taxonomy data required by PhyloProfile package and two experimental datasets to illustrate running and analysing phylogenetic profiles with PhyloProfile package.
 URL: https://github.com/BIONF/PhyloProfileData
 BugReports: https://github.com/trvinh/PhyloProfileData/issues
 License: MIT + file LICENSE
