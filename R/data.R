@@ -15,7 +15,9 @@
 
 #' Phylogenetic profiles of Arthropoda taxon set
 #'
-#' Write the description here 
+#'The phylogenetic profile of 1011 ortholog groups across 89 species 
+#'was calculated from the BUSCO arthropoda dataset published
+#'from Simão et al.2015 https://doi.org/10.1093/bioinformatics/btv351
 #' @format A data frame with 5 columns and 54656 rows:
 #' \itemize{
 #'     \item{geneID}{Gene ID, e.g. "97421at6656"}
@@ -29,14 +31,18 @@
 
 #' FASTA sequences of Arthropoda data
 #'
-#' Write the description here 
+#' A list of fasta sequences (AAStringSet objects) for 1011 orthoDB ortholog 
+#' groups of the phylogenetic profile. These ortholog groups were calculated
+#' from the BUSCO arthropoda dataset and include orthologs which were found in 
+#' arthropodas and sometimes can be found outlying.
 #' @format A AAStringSet object (package Biostrings)
 #' @usage data(arthropodaFasta)
 "arthropodaFasta"
 
 #' Protein domain annotations of Arthropoda data
 #'
-#' Write the description here 
+#' Data frame containing the domain annotation for all proteins in phylogenetic 
+#' profiles of the arthropoda dataset.
 #' @format A data frame with 8 columns and 869651 rows:
 #' \itemize{
 #'     \item{seedID}{Gene ID & its ortholog, e.g. 
