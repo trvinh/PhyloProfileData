@@ -4,12 +4,12 @@ author: "Hannah Mülbaier & Vinh Tran"
 date: "`r Sys.Date()`"
 package: PhyloProfileData
 output:
-  BiocStyle::html_document:
-    toc: true
+    BiocStyle::html_document:
+        toc: true
 vignette: >
-  %\VignetteIndexEntry{PhyloProfileData}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+    %\VignetteIndexEntry{PhyloProfileData}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
 ---
 
 # Introduction
@@ -174,8 +174,8 @@ orthologs. Nature Methods, 13, 425–430.
 search for orthologs in ESTs. BMC Evol Biol., 9, 157
 4. Federhen, S. (2012) The NCBI Taxonomy database. Nucleic Acids Res., 40, 
 D136–D143.
-5. Finn, RD. (2014) Pfam: The protein families database. Nucleic Acids Res., 42, 
-D222-30
+5. Finn, RD. (2014) Pfam: The protein families database. Nucleic Acids Res., 
+42, D222-30
 6. Koestler, T. et al. (2010) FACT: functional annotation transfer between 
 proteins with similar feature architectures. BMC Bioinformatics, 11, 417.
 7. Kriventseva, EK. et al.(2018) OrthoDB v10: sampling the diversity of animal, 
@@ -188,8 +188,8 @@ hidden Markov model: application to complete genomes. J Mol Biol., 305(3),
 annotation resource. Nucleic Acids Res., 40, D302-5.
 10. Lupas, A. et al. (1991) Predicting Coiled Coils from Protein Sequences. 
 Science, 252, 1162-1164.
-11. Promponas, VJ. et al. (2000) CAST: an iterative algorithm for the complexity 
-analysis of sequence tracts. Bioinformatics, 16(10), 915–922.
+11. Promponas, VJ. et al. (2000) CAST: an iterative algorithm for the 
+complexity analysis of sequence tracts. Bioinformatics, 16(10), 915–922.
 12. Roustan, V. et al. (2016) An evolutionary perspective of AMPK–TOR signaling 
 in the three domains of life. Journal of Experimental Botany, 67(13), 3897–3907.
 13. Simão, F. et al. (2015) BUSCO: assessing genome assembly and annotation 
