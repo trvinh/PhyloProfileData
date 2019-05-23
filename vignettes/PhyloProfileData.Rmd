@@ -71,7 +71,7 @@ al. 2016.
 
 This data set includes 3 files: 
 
-- A phylogenetic profile input contains the human protein IDs, the taxaonomy ID
+- A phylogenetic profile input contains the human protein IDs, the taxaonomy IDs
 of the 83 search species and the corresponding orthologous protein IDs in those 
 species, together with two additional values, the forward and backward feature
 architecture similarity (FAS) scores. *FAS approach* (Dosch et al. 2019) is an 
@@ -122,16 +122,16 @@ ortholog set that can be used for further phylogenetic profiling studies, we
 made use of the well-known *BUSCO* datasets (Simão et al. 2015). Here we 
 represent the phylogenetic profile of 1011 ortholog groups across 89 species, 
 which was calculated from the BUSCO arthropoda dataset downloaded from 
-https://busco.ezlab.org/datasets/arthropoda_odb9.tar.gz in Jan. 2018. The 89 
+https://busco.ezlab.org/datasets/arthropoda_odb9.tar.gz in Jan. 2018. The 88 
 species included 10 arthropoda species (Ladona fulva, Agrilus planipennis, Polypedilum vanderplanki, Daphnia magna, 
 Harpegnathos saltator, Zootermopsis nevadensis, Halyomorpha halys, 
 Heliconius melpomene, Stegodyphus mimosarum, Drosophila willistoni) downloaded from orthoDB version 10 
 (https://www.orthodb.org) and 78 species of the QfO dataset (REF).
 
-This datset includes 3 files:
+This dataset includes 3 files:
 
-- A phylogenetic profile input contains ????? the human protein IDs ?????? (I think Ingo used Drosophila as reference species, since the file was named arthropoda_busco-drome), the taxaonomy ID
-of the 89 searched species and the corresponding orthologous protein IDs in 
+- A phylogenetic profile input contains 1011 BUSCO ortholog group IDs, the 
+taxaonomy IDs of the 88 searched species and the corresponding orthologous protein IDs in 
 those species, together with two additional values, the forward and backward FAS 
 scores which is descriped above in the description of the AMPK-TOR pathway.
 

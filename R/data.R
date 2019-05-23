@@ -31,7 +31,7 @@
 
 #' FASTA sequences of Arthropoda data
 #'
-#' A list of fasta sequences (AAStringSet objects) for 1011 orthoDB ortholog 
+#' A list of fasta sequences (AAStringSet objects) for 1011 BUSCO ortholog 
 #' groups of the phylogenetic profile. These ortholog groups were calculated
 #' from the BUSCO arthropoda dataset and include orthologs in 10 arthropoda
 #' species and 78 species of the QfO Dataset. 
