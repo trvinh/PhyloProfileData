@@ -9,7 +9,7 @@ Description: A preprocessed NCBI taxonomy data required by PhyloProfile package 
 URL: https://github.com/BIONF/PhyloProfileData
 BugReports: https://github.com/trvinh/PhyloProfileData/issues
 License: MIT + file LICENSE
-Depends: R (>= 3.5.0)
+Depends: R (>= 3.6.0)
 Encoding: UTF-8
 biocViews: ReproducibleResearch
 Suggests: knitr

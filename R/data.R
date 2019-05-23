@@ -13,52 +13,6 @@
 #' @source ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
 "ncbiTaxonNamesFull"
 
-#' Phylogenetic profiles of Arthropoda taxon set
-#'
-#'The phylogenetic profile of 1011 ortholog groups across 89 species 
-#'was calculated from the BUSCO arthropoda dataset published
-#'from Simão et al.2015 https://doi.org/10.1093/bioinformatics/btv351
-#' @format A data frame with 5 columns and 54656 rows:
-#' \itemize{
-#'     \item{geneID}{Gene ID, e.g. "97421at6656"}
-#'     \item{ncbiID}{Taxonomy ID of the search species, e.g. "ncbi9598"}
-#'     \item{orthoID}{Ortholog ID, e.g. "97421at6656|PANTR@9598@1|H2QTF9|1"}
-#'     \item{FAS_F}{Forward FAS score, e.g. "0.6872810"}
-#'     \item{FAS_B}{Backward FAS score, e.g. "0.9654661"}
-#' }
-#' @usage data(arthropodaPhyloProfile)
-"arthropodaPhyloProfile"
-
-#' FASTA sequences of Arthropoda data
-#'
-#' A list of fasta sequences (AAStringSet objects) for 1011 BUSCO ortholog 
-#' groups of the phylogenetic profile. These ortholog groups were calculated
-#' from the BUSCO arthropoda dataset and include orthologs in 10 arthropoda
-#' species and 78 species of the QfO Dataset. 
-#' @format A AAStringSet object (package Biostrings)
-#' @usage data(arthropodaFasta)
-"arthropodaFasta"
-
-#' Protein domain annotations of Arthropoda data
-#'
-#' Data frame containing the domain annotation for all proteins in phylogenetic 
-#' profiles of the arthropoda dataset.
-#' @format A data frame with 8 columns and 869651 rows:
-#' \itemize{
-#'     \item{seedID}{Gene ID & its ortholog, e.g. 
-#'     "136365at6656#136365at6656|ANOGA@7165@1|Q7QC64|1"}
-#'     \item{orthoID}{Seed/Ortholog ID, e.g. 
-#'     "136365at6656|ANOGA@7165@1|Q7QC64|1"}
-#'     \item{length}{Seed/Ortholog length, e.g. "142"}
-#'     \item{feature}{Annotated feature/domain, e.g. "pfam_Ribosomal_L27"}
-#'     \item{start}{Start position, e.g. "26"}
-#'     \item{end}{End position, e.g. "106"}
-#'     \item{weight}{Feature weight, e.g. "NA"}
-#'     \item{path}{Feature is used for comparison (Y/N), e.g. "Y"}
-#' }
-#' @usage data(arthropodaDomain)
-"arthropodaDomain"
-
 #' Phylogenetic profiles of AMPK-TOR taxon set
 #'
 #' Data frame contains the phylogenetic profiles of 147 proteins of the human 
@@ -100,3 +54,47 @@
 #' }
 #' @usage data(ampkTorDomain)
 "ampkTorDomain"
+
+#' Phylogenetic profiles of Arthropoda taxon set
+#'
+#'The phylogenetic profile of 1011 ortholog groups across 88 species 
+#'was calculated from the BUSCO arthropoda dataset published
+#'from Simão et al.2015 https://doi.org/10.1093/bioinformatics/btv351
+#' @format A data frame with 5 columns and 54500 rows:
+#' \itemize{
+#'     \item{geneID}{Gene ID, e.g. "97421at6656"}
+#'     \item{ncbiID}{Taxonomy ID of the search species, e.g. "ncbi9598"}
+#'     \item{orthoID}{Ortholog ID, e.g. "97421at6656|PANTR@9598@1|H2QTF9|1"}
+#'     \item{FAS_F}{Forward FAS score, e.g. "0.6872810"}
+#'     \item{FAS_B}{Backward FAS score, e.g. "0.9654661"}
+#' }
+#' @usage data(arthropodaPhyloProfile)
+"arthropodaPhyloProfile"
+
+#' FASTA sequences of Arthropoda data
+#'
+#' A list of fasta sequences (AAStringSet objects) for 1011 BUSCO ortholog 
+#' groups of the phylogenetic profile. It has in total 54488 protein sequences.
+#' @format A AAStringSet object (package Biostrings)
+#' @usage data(arthropodaFasta)
+"arthropodaFasta"
+
+#' Protein domain annotations of Arthropoda data
+#'
+#' Data frame containing the domain annotation for all proteins in phylogenetic 
+#' profiles of the arthropoda dataset.
+#' @format A data frame with 8 columns and 866912 rows:
+#' \itemize{
+#'     \item{seedID}{Gene ID & its ortholog, e.g. 
+#'     "136365at6656#136365at6656|ANOGA@7165@1|Q7QC64|1"}
+#'     \item{orthoID}{Seed/Ortholog ID, e.g. 
+#'     "136365at6656|ANOGA@7165@1|Q7QC64|1"}
+#'     \item{length}{Seed/Ortholog length, e.g. "142"}
+#'     \item{feature}{Annotated feature/domain, e.g. "pfam_Ribosomal_L27"}
+#'     \item{start}{Start position, e.g. "26"}
+#'     \item{end}{End position, e.g. "106"}
+#'     \item{weight}{Feature weight, e.g. "NA"}
+#'     \item{path}{Feature is used for comparison (Y/N), e.g. "Y"}
+#' }
+#' @usage data(arthropodaDomain)
+"arthropodaDomain"
