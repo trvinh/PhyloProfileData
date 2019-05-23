@@ -1,2 +1,2 @@
 # PhyloProfileData
-NCBI taxonomy data and experimental data sets for phylogenetic profile analysis using PhyloProfile
+A preprocessed NCBI taxonomy data required by PhyloProfile package and two experimental datasets to illustrate running and analysing phylogenetic profiles with PhyloProfile package.
