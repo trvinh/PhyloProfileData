@@ -20,8 +20,9 @@ The PhyloProfileData package contains the following data objects:
 2. Two experimental datasets to illustrate running and analysing phylogenetic 
 profiles with PhyloProfile.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 library(PhyloProfileData)
+data(package = "PhyloProfileData")
 ```
 
 # Preprocessed NCBI taxonomy data
@@ -46,7 +47,7 @@ large number of taxa and parsing them can be time consuming. Therefore we
 provide a preprocessed taxonomy file for *PhyloProfile* that contains required 
 information for those related functions. 
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 # Load data
 data("ncbiTaxonNamesFull")
 head(ncbiTaxonNamesFull)
@@ -72,15 +73,17 @@ This data set includes 3 files:
 
 - A phylogenetic profile input contains the human protein IDs, the taxaonomy ID
 of the 83 search species and the corresponding orthologous protein IDs in those 
-species, together with two additional values, the forward and backward FAS 
-scores. FAS score is an enhancement of FACT which computes the feature architecture 
-similarity score of two proteins. Therefore the domaine annotations 
-were computed with different annotation tools and databases, such as *PFAM*, *SMART*, *CAST*, 
-*COILS2*, *SEG*, *SignalP*, and *TMHMM*. The path with the highest score and 
-without any overlap over the domains was calculated and compared to the found 
-path of the second protein.
+species, together with two additional values, the forward and backward feature
+architecture similarity (FAS) scores. *FAS approach* (Dosch et al. 2019) is an 
+enhancement of *FACT* (Koestler et al. 2010) which give an idea how similar two 
+proteins are in term of functional equivalence. These compared protein features 
+can be the functional PFAM or SMART domains, the transmembran domains, secondary
+structures or low complexity regions of the protein. FAS scores have a range 
+between 0 and 1, where 1 is for a protein pair that have identical 
+architectures, and 0 in cases that two proteins are completely different in 
+their architectures.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 data("ampkTorPhyloProfile")
 head(ampkTorPhyloProfile)
 ```
@@ -88,79 +91,71 @@ head(ampkTorPhyloProfile)
 - A multiple fasta object contains the FASTA sequences for all the proteins 
 present in the data set.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 data("ampkTorFasta")
 head(ampkTorFasta)
 ```
 
 - A data frame contains the domain annotation for the proteins present in 
 the phylogenetic profiles. The protein domain annotations were done using 
-different annotation tools and databases, such as *PFAM*, *SMART*, *CAST*, 
+different annotation tools and databases, including *PFAM*, *SMART*, *CAST*, 
 *COILS2*, *SEG*, *SignalP*, and *TMHMM*. The annotation types together with 
 their domain name and the corresponding start and end positions are stored in 
 this domain data frame.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 data("ampkTorDomain")
 head(ampkTorDomain)
 ```
 
-
 ## Phylogenetic profiles of Arthropoda proteins
 
-The phylogenetic profile of 1011 ortholog groups across 89 species 
-was calculated from the BUSCO arthropoda dataset published
-from Simão et al.2015 against. The 89 species included 10 arthropoda species 
-downloaded by orthoDB and 78 species of the QfO dataset.
-The BUSCO arthropoda dataset was downloaded from https://busco.ezlab.org/datasets/arthropoda_odb9.tar.gz in Jan. 2018. 
-
-HaMStR-OneSeq, a tool which predicts orthologs and compares their 
-Feature Architecture Similarity scores, bases the calculation on given 
-core-ortholog datasets. To make the application more flexible and customized
-due to the research question, the well known BUSCO datasets were transformed
-to the format required from HaMStR-OneSeq, so they can be used as core-orthologs.
-
-The BUSCO datasets mentioned above provided the information, which protein sequence
-belongs to which BUSCO ortholog group, and was used to download the protein 
-sequences from orthoDB version 10 (https://www.orthodb.org).
-Afterwards, the sequences of every ortholog group were filtered off 10 species 
-(Ladona fulva, Agrilus planipennis, Polypedilum vanderplanki, Daphnia magna, 
+One fundamental step in establishing the phylogenetic profiles is searching 
+orthologs for the query proteins in different taxa of interest. *HaMStR-oneseq*, 
+an extended version of *HaMStR* (Ebersberger et al. 2009), has been shown to be 
+an promising approach for sensitively predicting orthologs even in the distantly 
+related taxa from the query species, which is required for the phylogenetic 
+profiling of a broad range of taxa through all domains of the species tree of 
+life. One main parameter for HaMStR-oneseq is the core ortholog group, the 
+starting point for the orthology search. In order to set up a reliable core 
+ortholog set that can be used for further phylogenetic profiling studies, we 
+made use of the well-known *BUSCO* datasets (Simão et al. 2015). Here we 
+represent the phylogenetic profile of 1011 ortholog groups across 89 species, 
+which was calculated from the BUSCO arthropoda dataset downloaded from 
+https://busco.ezlab.org/datasets/arthropoda_odb9.tar.gz in Jan. 2018. The 89 
+species included 10 arthropoda species (Ladona fulva, Agrilus planipennis, Polypedilum vanderplanki, Daphnia magna, 
 Harpegnathos saltator, Zootermopsis nevadensis, Halyomorpha halys, 
-Heliconius melpomene, Stegodyphus mimosarum,Drosophila willistoni), the multiple
-sequence alignments were computed with *MUSCLE* and the pHMMs were calculated 
-with *HMMER3*. After the integration of these new groups as core-orthologs in 
-HaMStR-OneSeq and the integration of the new species datasets to the one 
-supplied by HaMStr, the phylogenetic profile was computed. 
+Heliconius melpomene, Stegodyphus mimosarum, Drosophila willistoni) downloaded from orthoDB version 10 
+(https://www.orthodb.org) and 78 species of the QfO dataset (REF).
 
 This datset includes 3 files:
 
-- A phylogenetic profile input contains the human protein IDs, the taxaonomy ID
-of the 89 searched species and the corresponding orthologous protein IDs in those 
-species, together with two additional values, the forward and backward FAS 
+- A phylogenetic profile input contains ????? the human protein IDs ?????? (I think Ingo used Drosophila as reference species, since the file was named arthropoda_busco-drome), the taxaonomy ID
+of the 89 searched species and the corresponding orthologous protein IDs in 
+those species, together with two additional values, the forward and backward FAS 
 scores which is descriped above in the description of the AMPK-TOR pathway.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 data("arthropodaPhyloProfile")
 head(arthropodaPhyloProfile)
 ```
 
-
 - A multiple fasta object contains the FASTA sequences for all the proteins 
 present in the data set.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 data("arthropodaFasta")
 head(arthropodaFasta)
 ```
 
 - A data frame contains the domain annotation for the proteins present in 
 the phylogenetic profiles. The protein domain annotations were done using 
-different annotation tools and databases, such as *PFAM*, *SMART*, *CAST*, 
+different annotation tools and databases, including *PFAM*, *SMART*, *CAST*, 
 *COILS2*, *SEG*, *SignalP*, and *TMHMM*. The annotation types together with 
 their domain name and the corresponding start and end positions are stored in 
 this domain data frame.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning = FALSE, message = FALSE}
 data("arthropodaDomain")
 head(arthropodaDomain)
 ```
@@ -169,16 +164,20 @@ head(arthropodaDomain)
 1. Federhen, S. (2012) The NCBI Taxonomy database. Nucleic Acids Res, 40, 
 D136–D143.
 2. Roustan, V. et al. (2016) An evolutionary perspective of AMPK–TOR signaling 
-in the three domains of life. Journal of Experimental Botany, 67 (13), 3897–3907
+in the three domains of life. Journal of Experimental Botany, 67 (13), 
+3897–3907.
 3. Simão, F. et al. (2015) BUSCO: assessing genome assembly and annotation 
-completeness with single-copy orthologs. Bioinformatics, 31 (19), 3210-2
-4. Altenhoff A et al., Standardized benchmarking in the quest for orthologs. Nature Methods, 2016, 13, 425-430
-5. Ebersberger I. et al. (2009) HaMStR: profile hidden markov model based search for 
-orthologs in ESTs. BMC Evol Biol. 9,157
-6. Edgar R. et al. (2004) MUSCLE: multiple sequence alignment with high accuracy and high throughput. Nucleic Acids Res. 32 (5), 1792–1797
-7. Eddey S. et al. (2011) Accelerated Profile HMM Searches. PLoS Comput Biol 
-7 (10), e1002195 
-8. Kriventseva EK et al.(2018) OrthoDB v10: sampling the diversity of animal, plant, fungal, protist, bacterial and viral genomes for evolutionary and functional annotations of orthologs
-Nucleic Acids Res. 47(D1), D807-D811
+completeness with single-copy orthologs. Bioinformatics, 31 (19), 3210-2.
+4. Altenhoff A et al., Standardized benchmarking in the quest for orthologs. 
+Nature Methods, 2016, 13, 425-430.
+5. Ebersberger I. et al. (2009) HaMStR: profile hidden markov model based search
+for orthologs in ESTs. BMC Evol Biol., 9, 157
+6. Edgar R. et al. (2004) MUSCLE: multiple sequence alignment with high accuracy
+and high throughput. Nucleic Acids Res. 32 (5), 1792–1797.
+7. Eddey S. et al. (2011) Accelerated Profile HMM Searches. PLoS Comput Biol, 
+7 (10), e1002195.
+8. Kriventseva EK et al.(2018) OrthoDB v10: sampling the diversity of animal, 
+plant, fungal, protist, bacterial and viral genomes for evolutionary and 
+functional annotations of orthologs. Nucleic Acids Res., 47(D1), D807-D811.
 9. Koestler et al. (2010) FACT: functional annotation transfer between proteins 
-with similar feature architectures. BMC Bioinformatics. 11,417
+with similar feature architectures. BMC Bioinformatics, 11, 417.
