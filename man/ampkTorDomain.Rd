@@ -18,7 +18,7 @@
 data(ampkTorDomain)
 }
 \description{
-Write the description here (what are the scores, how many taxa, how many 
-proteins)
+Data frame containing the domain annotation for all proteins in phylogenetic 
+profiles of the human AMPK-TOR pathways.
 }
 \keyword{datasets}

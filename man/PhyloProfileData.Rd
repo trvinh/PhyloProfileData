@@ -6,14 +6,18 @@
 \alias{PhyloProfileData-package}
 \title{Data package for phylogenetic profile analysis using PhyloProfile tool}
 \description{
-The MOFAdata package provides a collection of datasets to accompany the
-R package MOFA, where they are used to illustrate how to run MOFA and analyse its results.
-Briefly, it contains multi-omics data for a bulk study on chronic lymphocytic leukemia and
-a single cell scMT-seq study. For these two data sets, we also provide
-pretrained MOFA objects to be used in downstream analysis with MOFA.
-In addition, various gene sets are stored here, that can be useful when
-performing feature set enrichment analysis in MOFA.
+The PhyloProfileData package provides a collection of datasets 
+to accompany the R package PhyloProfile, where they are used to illustrate 
+how to run MOFA and analyse its results. Briefly, it contains the 
+phylogenetic profiles, the fasta sequences and the domain annotations for two
+experimental data sets, including human AMPK-TOR pathway proteins and BUSCO 
+Arthropoda proteins. In addition, a preprocessing NCBI taxonomy data is also
+provided, which required for some functions of the PhyloProfile package, i.e.
+the ability to sort input taxa based on a selected reference taxon, or to 
+change the resolution of the phylogenetic profiling analysis from species 
+level to class or phylum level.
 }
 \details{
-An overview of the datasets contained in this package can be found in the vignette "MOFAdata".
+More details of the datas can be found in the vignette 
+"PhyloProfileData".
 }

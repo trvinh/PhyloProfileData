@@ -9,7 +9,8 @@
 data(ampkTorFasta)
 }
 \description{
-Write the description here (how many species, how many sequences, where can 
-one get the data)
+A list of fasta sequences (AAStringSet objects) for 6535 proteins of the 
+phylogenetic profiles. They include 147 human proteins that are part of the 
+human AMPK-TOR pathway and 6388 orthologous proteins in other 82 species.
 }
 \keyword{datasets}

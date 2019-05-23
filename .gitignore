@@ -19,6 +19,7 @@
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
+vignettes/*.R
 
 # DS_Store
 **/.DS_Store

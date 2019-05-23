@@ -16,7 +16,8 @@
 data(ampkTorPhyloProfile)
 }
 \description{
-Write the description here (what are the scores, how many taxa, how many 
-proteins - what are those proteins)
+Data frame contains the phylogenetic profiles of 147 proteins of the human 
+AMPK-TOR pathway across 83 species in the three domains of life. This data is
+part of the published study https://doi.org/10.1093/jxb/erw211.
 }
 \keyword{datasets}

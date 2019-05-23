@@ -11,11 +11,14 @@
     \item{rank}{ e.g. "species"}
     \item{parentID}{ e.g. "862507"}
 }}
+\source{
+ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
+}
 \usage{
 data(ncbiTaxonNamesFull)
 }
 \description{
-A list of all NCBI taxon IDs, taxon names, their systematic taxonomy rank and
-IDs of their next ranks (parent IDs)
+Data frame contains all NCBI taxon IDs, taxon names, their systematic 
+taxonomy rank and IDs of their next ranks (parent IDs)
 }
 \keyword{datasets}

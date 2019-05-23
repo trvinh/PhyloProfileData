@@ -4,7 +4,7 @@
 \name{arthropodaDomain}
 \alias{arthropodaDomain}
 \title{Protein domain annotations of Arthropoda data}
-\format{A data frame with 8 columns and 869651 rows:
+\format{A data frame with 8 columns and 866912 rows:
 \itemize{
     \item{seedID}{Gene ID & its ortholog, e.g. 
     "136365at6656#136365at6656|ANOGA@7165@1|Q7QC64|1"}
@@ -21,7 +21,7 @@
 data(arthropodaDomain)
 }
 \description{
-Write the description here (what are the scores, how many taxa, how many 
-proteins)
+Data frame containing the domain annotation for all proteins in phylogenetic 
+profiles of the arthropoda dataset.
 }
 \keyword{datasets}

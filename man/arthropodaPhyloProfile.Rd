@@ -4,7 +4,7 @@
 \name{arthropodaPhyloProfile}
 \alias{arthropodaPhyloProfile}
 \title{Phylogenetic profiles of Arthropoda taxon set}
-\format{A data frame with 5 columns and 54656 rows:
+\format{A data frame with 5 columns and 54500 rows:
 \itemize{
     \item{geneID}{Gene ID, e.g. "97421at6656"}
     \item{ncbiID}{Taxonomy ID of the search species, e.g. "ncbi9598"}
@@ -16,7 +16,8 @@
 data(arthropodaPhyloProfile)
 }
 \description{
-Write the description here (what are the scores, how many taxa, how many 
-proteins - what are those proteins)
+The phylogenetic profile of 1011 ortholog groups across 88 species 
+was calculated from the BUSCO arthropoda dataset published
+from Simão et al.2015 https://doi.org/10.1093/bioinformatics/btv351
 }
 \keyword{datasets}

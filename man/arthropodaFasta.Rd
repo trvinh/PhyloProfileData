@@ -9,7 +9,7 @@
 data(arthropodaFasta)
 }
 \description{
-Write the description here (how many species, how many sequences, where can 
-one get the data)
+A list of fasta sequences (AAStringSet objects) for 1011 BUSCO ortholog 
+groups of the phylogenetic profile. It has in total 54488 protein sequences.
 }
 \keyword{datasets}
