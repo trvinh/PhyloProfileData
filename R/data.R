@@ -33,8 +33,8 @@
 #'
 #' A list of fasta sequences (AAStringSet objects) for 1011 orthoDB ortholog 
 #' groups of the phylogenetic profile. These ortholog groups were calculated
-#' from the BUSCO arthropoda dataset and include orthologs which were found in 
-#' arthropodas and sometimes can be found outlying.
+#' from the BUSCO arthropoda dataset and include orthologs in 10 arthropoda
+#' species and 78 species of the QfO Dataset. 
 #' @format A AAStringSet object (package Biostrings)
 #' @usage data(arthropodaFasta)
 "arthropodaFasta"
