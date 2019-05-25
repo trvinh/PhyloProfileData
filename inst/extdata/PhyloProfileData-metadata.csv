@@ -8,7 +8,7 @@
         Ngoc-Vinh Tran, Bastian Greshake Tzovaras, Ingo Ebersberger; 
         PhyloProfile: Dynamic visualization and exploration of multi-layered 
         phylogenetic profiles, Bioinformatics, , bty225, 
-        https://doi.org/10.1093/bioinformatics/bty225","3.9",NA,"Zip","https://github.com/BIONF/phyloprofile-data/blob/master/preProcessedTaxonomy.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame","RData","PhyloProfileData/preProcessedTaxonomy.RData","NCBI taxonomy files downloaded in May 13th 2019 from ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy//taxdmp.zip"
+        https://doi.org/10.1093/bioinformatics/bty225","3.9",NA,"Zip","ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy//taxdmp.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame","RData","PhyloProfileData/preProcessedTaxonomy.RData","NCBI taxonomy files downloaded in May 24th 2019"
 "Phylogenetic profiles of human proteins in the AMPK-TOR pathway","The phylogenetic profiles of 147 human proteins in the AMPK-TOR pathway
         across 83 species in the three domains of life. This data set contains
         a phylogenetic profile file, a multiple fasta file and a protein 
@@ -17,8 +17,8 @@
         Valentin Roustan, Arpit Jain, Markus Teige, Ingo Ebersberger, Wolfram 
         Weckwerth, An evolutionary perspective of AMPK–TOR signaling in the 
         three domains of life, Journal of Experimental Botany, Volume 67, Issue 
-        13, June 2016, Pages 3897–3907, https://doi.org/10.1093/jxb/erw211","3.9",NA,"Zip","https://github.com/BIONF/phyloprofile-data/blob/master/ampkTorProfile.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame, AAStringSet","RData","PhyloProfileData/ampkTorPhyloProfile.RData; PhyloProfileData/ampkTorFasta.RData; PhyloProfileData/ampkTorDomain.RData",NA
+        13, June 2016, Pages 3897–3907, https://doi.org/10.1093/jxb/erw211","3.9",NA,"Zip","https://github.com/BIONF/phyloprofile-data/blob/master/ampk-tor.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame, AAStringSet","RData","PhyloProfileData/ampkTorPhyloProfile.RData; PhyloProfileData/ampkTorFasta.RData; PhyloProfileData/ampkTorDomain.RData",NA
 "Phylogenetic profiles of BUSCO arthropoda proteins","The phylogenetic profiles of 1011 BUSCO arthropoda ortholog groups 
         across 88 species in the three domains of life. This data set contains
         a phylogenetic profile file, a multiple fasta file and a protein 
-        annotation file.","3.9",NA,"Zip","https://github.com/BIONF/phyloprofile-data/blob/master/arthropodaProfile.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame, AAStringSet","RData","PhyloProfileData/arthropodaPhyloProfile.RData; PhyloProfileData/arthropodaFasta.RData; PhyloProfileData/arthropodaDomain.RData",NA
+        annotation file.","3.9",NA,"Zip","https://github.com/BIONF/phyloprofile-data/blob/master/arthropoda.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame, AAStringSet","RData","PhyloProfileData/arthropodaPhyloProfile.RData; PhyloProfileData/arthropodaFasta.RData; PhyloProfileData/arthropodaDomain.RData",NA

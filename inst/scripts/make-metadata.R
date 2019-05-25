@@ -74,7 +74,7 @@ buscoArthropodaProfile <- data.frame(
     BiocVersion = "3.9",
     Genome = NA,
     SourceType = "Zip",
-    SourceUrl = "https://github.com/BIONF/phyloprofile-data/blob/master/arthropodaProfile.zip",
+    SourceUrl = "https://github.com/BIONF/phyloprofile-data/blob/master/arthropoda.zip",
     SourceVersion = "v1",
     Species = NA,
     TaxonomyId = NA,
