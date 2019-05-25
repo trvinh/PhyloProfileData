@@ -8,7 +8,7 @@
         Ngoc-Vinh Tran, Bastian Greshake Tzovaras, Ingo Ebersberger; 
         PhyloProfile: Dynamic visualization and exploration of multi-layered 
         phylogenetic profiles, Bioinformatics, , bty225, 
-        https://doi.org/10.1093/bioinformatics/bty225","3.9",NA,"Zip","ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy//taxdmp.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame","RData","PhyloProfileData/preProcessedTaxonomy.RData","NCBI taxonomy files downloaded in May 24th 2019"
+        https://doi.org/10.1093/bioinformatics/bty225","3.9",NA,"Zip","ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy//taxdmp.zip","v1",NA,NA,NA,"Applied Bioinformatics Dept., Goethe University Frankfurt","Vinh Tran <tran@bio.uni-frankfurt.de>","data.frame","RData","PhyloProfileData/preProcessedTaxonomy.RData","NCBI taxonomy files downloaded on May 24th 2019"
 "Phylogenetic profiles of human proteins in the AMPK-TOR pathway","The phylogenetic profiles of 147 human proteins in the AMPK-TOR pathway
         across 83 species in the three domains of life. This data set contains
         a phylogenetic profile file, a multiple fasta file and a protein 

@@ -25,7 +25,7 @@ preProcessedTaxonomy <- data.frame(
     RDataClass = "data.frame",
     DispatchClass = "RData",
     RDataPath = "PhyloProfileData/preProcessedTaxonomy.RData",
-    Note = "NCBI taxonomy files downloaded in May 24th 2019",
+    Note = "NCBI taxonomy files downloaded on May 24th 2019",
     stringsAsFactors = FALSE
 )
 
