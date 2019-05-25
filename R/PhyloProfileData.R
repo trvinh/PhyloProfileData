@@ -14,4 +14,5 @@
 #' "PhyloProfileData".
 #' @docType package
 #' @name PhyloProfileData
+#' @import Biostrings
 NULL

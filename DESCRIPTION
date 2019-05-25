@@ -12,6 +12,7 @@ License: MIT + file LICENSE
 Depends: R (>= 3.6.0)
 Encoding: UTF-8
 biocViews: ReproducibleResearch
+Imports: Biostrings
 Suggests: knitr
 VignetteBuilder: knitr
 LazyData: false

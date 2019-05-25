@@ -50,8 +50,8 @@ information for those related functions.
 
 ```{r, warning = FALSE, message = FALSE}
 # Load data
-data("ncbiTaxonNamesFull")
-head(ncbiTaxonNamesFull)
+data("preProcessedTaxonomy")
+head(preProcessedTaxonomy)
 ```
 
 The preprocessed taxonomy file contains the NCBI taxonomy ID for each taxon, 
@@ -122,7 +122,7 @@ species tree of life. One main parameter for HaMStR-oneseq is the core ortholog
 group, the starting point for the orthology search. In order to set up a 
 reliable core ortholog set that can be used for further phylogenetic profiling 
 studies, we made use of the well-known **BUSCO** datasets (Simão et al. 2015). 
-Here we represent the phylogenetic profile of 1011 ortholog groups across 88 
+Here we represent the phylogenetic profiles of 1011 ortholog groups across 88 
 species, which was calculated from the BUSCO arthropoda dataset downloaded from 
 https://busco.ezlab.org/datasets/arthropoda_odb9.tar.gz in Jan. 2018. The 88 
 species include 10 arthropoda species (*Ladona fulva*, *Agrilus planipennis*, 
