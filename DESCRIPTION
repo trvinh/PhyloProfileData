@@ -11,7 +11,7 @@ BugReports: https://github.com/trvinh/PhyloProfileData/issues
 License: MIT + file LICENSE
 Depends: R (>= 3.6.0)
 Encoding: UTF-8
-biocViews: ReproducibleResearch
+biocViews: ExperimentData, ReproducibleResearch, ExperimentHub
 Imports: Biostrings
 Suggests: knitr
 VignetteBuilder: knitr

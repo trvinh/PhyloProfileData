@@ -1,9 +1,9 @@
 library(Biostrings)
 
 # Processing NCBI taxonomy -----------------------------------------------------
-# Source downloaded from ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy//taxdmp.zip
+# Source downloaded from ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
 temp <- tempfile()
-download.file("ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy//taxdmp.zip", temp)
+download.file("ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip", temp)
 names <- read.table(
     unz(temp, "names.dmp"),
     header = FALSE,

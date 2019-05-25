@@ -15,7 +15,7 @@ preProcessedTaxonomy <- data.frame(
     BiocVersion = "3.9",
     Genome = NA,
     SourceType = "Zip",
-    SourceUrl = "ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy//taxdmp.zip",
+    SourceUrl = "ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip",
     SourceVersion = "v1",
     Species = NA,
     TaxonomyId = NA,
@@ -23,7 +23,7 @@ preProcessedTaxonomy <- data.frame(
     DataProvider = "Applied Bioinformatics Dept., Goethe University Frankfurt",
     Maintainer = "Vinh Tran <tran@bio.uni-frankfurt.de>",
     RDataClass = "data.frame",
-    DispatchClass = "RData",
+    DispatchClass = "Rda",
     RDataPath = "PhyloProfileData/preProcessedTaxonomy.RData",
     Note = "NCBI taxonomy files downloaded on May 24th 2019",
     stringsAsFactors = FALSE
@@ -53,7 +53,7 @@ ampkTorProfile <- data.frame(
     DataProvider = "Applied Bioinformatics Dept., Goethe University Frankfurt",
     Maintainer = "Vinh Tran <tran@bio.uni-frankfurt.de>",
     RDataClass = "data.frame, AAStringSet",
-    DispatchClass = "RData",
+    DispatchClass = "Rda",
     RDataPath = paste0(
         "PhyloProfileData/ampkTorPhyloProfile.RData; ",
         "PhyloProfileData/ampkTorFasta.RData; ",
@@ -82,7 +82,7 @@ buscoArthropodaProfile <- data.frame(
     DataProvider = "Applied Bioinformatics Dept., Goethe University Frankfurt",
     Maintainer = "Vinh Tran <tran@bio.uni-frankfurt.de>",
     RDataClass = "data.frame, AAStringSet",
-    DispatchClass = "RData",
+    DispatchClass = "Rda",
     RDataPath = paste0(
         "PhyloProfileData/arthropodaPhyloProfile.RData; ",
         "PhyloProfileData/arthropodaFasta.RData; ",
