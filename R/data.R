@@ -1,18 +1,3 @@
-#' Preprocessed NCBI taxonomy data
-#'
-#' Data frame contains all NCBI taxon IDs, taxon names, their systematic 
-#' taxonomy rank and IDs of their next ranks (parent IDs)
-#' @format A data frame with 4 columns and 2110551 rows:
-#' \itemize{
-#'     \item{ncbiID}{ e.g. "10090"}
-#'     \item{fullName}{ e.g. "Mus musculus"}
-#'     \item{rank}{ e.g. "species"}
-#'     \item{parentID}{ e.g. "862507"}
-#' }
-#' @usage data(preProcessedTaxonomy)
-#' @source ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
-"preProcessedTaxonomy"
-
 #' Phylogenetic profiles of AMPK-TOR taxon set
 #'
 #' Data frame contains the phylogenetic profiles of 147 proteins of the human 

@@ -1,46 +1,5 @@
 library(Biostrings)
 
-# Processing NCBI taxonomy -----------------------------------------------------
-# Source downloaded from ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
-temp <- tempfile()
-download.file("ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip", temp)
-names <- read.table(
-    unz(temp, "names.dmp"),
-    header = FALSE,
-    fill = TRUE,
-    sep = "\t",
-    quote = "",
-    comment.char = "",
-    stringsAsFactors = FALSE
-)
-nodes <- read.table(
-    unz(temp, "nodes.dmp"),
-    header = FALSE,
-    fill = TRUE,
-    sep = "\t",
-    quote = "",
-    comment.char = "",
-    stringsAsFactors = FALSE
-)
-unlink(temp)
-
-# Create data frame containing taxon ID, the scientific name, its taxonomy rank
-# and the taxon ID of the higer rank (parent's ID)
-preProcessedTaxonomy <- merge(
-    names[names$V7 == "scientific name", c("V1", "V3")],
-    nodes[,c("V1", "V5", "V3")],
-    by = "V1"
-)
-colnames(preProcessedTaxonomy) <- c("ncbiID", "fullName", "rank", "parentID")
-
-# Remove "'" from taxon names and ranks, remove space from taxon ranks
-preProcessedTaxonomy$fullName <- gsub("'", "", preProcessedTaxonomy$fullName)
-preProcessedTaxonomy$rank <- gsub("'", "", preProcessedTaxonomy$rank)
-preProcessedTaxonomy$rank <- gsub(" ", "", preProcessedTaxonomy$rank)
-
-# Save into RData object
-save(preProcessedTaxonomy, file = "preProcessedTaxonomy.RData", compress='xz')
-
 # Create AMPK-TOR phylogenetic profile data set --------------------------------
 # Load data
 # Source https://github.com/BIONF/phyloprofile-data/blob/master/ampk-tor.zip

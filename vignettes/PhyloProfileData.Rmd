@@ -13,58 +13,16 @@ vignette: >
 ---
 
 # Introduction
-The PhyloProfileData package contains the following data objects:
-
-1. A preprocessed NCBI taxonomy data required by PhyloProfile package, and
-
-2. Two experimental datasets to illustrate running and analysing phylogenetic 
-profiles with PhyloProfile.
+The PhyloProfileData package contains two experimental datasets to illustrate 
+running and analysing phylogenetic profiles with PhyloProfile pakage 
+(Tran et al. 2018).
 
 ```{r}
 library(PhyloProfileData)
 data(package = "PhyloProfileData")
 ```
 
-# Preprocessed NCBI taxonomy data
-The **PhyloProfile** package (Tran et al. 2018) provides two unique features in 
-comparison to other existing phylogenetic profiling tools. One of them the 
-ability to rapidly change the resolution of the comparative analysis of proteins
-in individual species, to that acros classes, phyla or entire kingdoms by 
-collapsing the input taxa into the corresponding systematic ranks. The other 
-feature is that, **PhyloProfile** can automatically order the input taxa in 
-increasing taxonomic distance from a user-specified reference taxon. 
-Furthermore, **PhyloProfile** can convert the input taxon IDs into the 
-scientific names for the presentation of the profiles, which enable a more 
-informative picture than showing only the taxon IDs. 
-
-Those features are only available when we link the taxon IDs in the input 
-phylogenetic profile with their full taxonomy information including the IDs and 
-the scientific names from the lowest systematic rank (e.g. `strain` or 
-`species`) up to the root of the species tree (e.g. `cellular organism`).
-
-There are packages that can get the NCBI taxonomy ranks and IDs for a given 
-taxon (such as *taxize*), however getting these information on the fly for a 
-large number of taxa and parsing them can be time consuming. Therefore we 
-provide a preprocessed taxonomy file for *PhyloProfile* that contains required 
-information for those related functions. 
-
-```{r, warning = FALSE, message = FALSE}
-# Load data
-data("preProcessedTaxonomy")
-head(preProcessedTaxonomy)
-```
-
-The preprocessed taxonomy file contains the NCBI taxonomy ID for each taxon, 
-their corresponding scientific name, the current systematic rank and the ID of 
-its higher rank (parent ID). These information were parsed from the `names.dmp`
-and `nodes.dmp` files downloaded from 
-ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip. This data contains 
-2.110.551 entries, correspond to the complete NCBI taxonomy database (Federhen, 
-2012) on May 13th 2019.
-
-# Experimental datasets
-
-## Phylogenetic profiles of AMPK-TOR pathway
+# Phylogenetic profiles of AMPK-TOR pathway
 
 The phylogenetic profiles of 147 human proteins in the AMPK-TOR pathway across 
 83 species in the three domains of life were taken from the study of Roustan et 
@@ -110,7 +68,7 @@ data("ampkTorDomain")
 head(ampkTorDomain)
 ```
 
-## Phylogenetic profiles of BUSCO Arthropoda proteins
+# Phylogenetic profiles of BUSCO Arthropoda proteins
 
 One fundamental step in establishing the phylogenetic profiles is searching 
 orthologs for the query proteins in different taxa of interest. 
@@ -172,29 +130,27 @@ predictions using deep neural networks. Nature Biotechnology, 37, 420–423.
 orthologs. Nature Methods, 13, 425–430.
 3. Ebersberger, I. et al. (2009) HaMStR: profile hidden markov model based 
 search for orthologs in ESTs. BMC Evol Biol., 9, 157
-4. Federhen, S. (2012) The NCBI Taxonomy database. Nucleic Acids Res., 40, 
-D136–D143.
-5. Finn, RD. (2014) Pfam: The protein families database. Nucleic Acids Res., 
+4. Finn, RD. (2014) Pfam: The protein families database. Nucleic Acids Res., 
 42, D222-30
-6. Koestler, T. et al. (2010) FACT: functional annotation transfer between 
+5. Koestler, T. et al. (2010) FACT: functional annotation transfer between 
 proteins with similar feature architectures. BMC Bioinformatics, 11, 417.
-7. Kriventseva, EK. et al.(2018) OrthoDB v10: sampling the diversity of animal, 
+6. Kriventseva, EK. et al.(2018) OrthoDB v10: sampling the diversity of animal, 
 plant, fungal, protist, bacterial and viral genomes for evolutionary and 
 functional annotations of orthologs. Nucleic Acids Res., 47(D1), D807-D811.
-8. Krogh, A. et al. (2001) Predicting transmembrane protein topology with a 
+7. Krogh, A. et al. (2001) Predicting transmembrane protein topology with a 
 hidden Markov model: application to complete genomes. J Mol Biol., 305(3), 
 567-80.
-9. Letunic, I. et al. (2012) SMART 7: recent updates to the protein domain 
+8. Letunic, I. et al. (2012) SMART 7: recent updates to the protein domain 
 annotation resource. Nucleic Acids Res., 40, D302-5.
-10. Lupas, A. et al. (1991) Predicting Coiled Coils from Protein Sequences. 
+9. Lupas, A. et al. (1991) Predicting Coiled Coils from Protein Sequences. 
 Science, 252, 1162-1164.
-11. Promponas, VJ. et al. (2000) CAST: an iterative algorithm for the 
+10. Promponas, VJ. et al. (2000) CAST: an iterative algorithm for the 
 complexity analysis of sequence tracts. Bioinformatics, 16(10), 915–922.
-12. Roustan, V. et al. (2016) An evolutionary perspective of AMPK–TOR signaling 
+11. Roustan, V. et al. (2016) An evolutionary perspective of AMPK–TOR signaling 
 in the three domains of life. Journal of Experimental Botany, 67(13), 3897–3907.
-13. Simão, F. et al. (2015) BUSCO: assessing genome assembly and annotation 
+12. Simão, F. et al. (2015) BUSCO: assessing genome assembly and annotation 
 completeness with single-copy orthologs. Bioinformatics, 31(19), 3210-2.
-14. Tran, NV. et al. (2018) PhyloProfile: dynamic visualization and exploration 
+13. Tran, NV. et al. (2018) PhyloProfile: dynamic visualization and exploration 
 of multi-layered phylogenetic profiles. Bioinformatics, 34(17), 3041–3043.
-15. Wootton, J. and  Federhen, S. (1996) Analysis of compositionally biased 
+14. Wootton, J. and  Federhen, S. (1996) Analysis of compositionally biased 
 regions in sequence databases. Methods in Enzymol., 266, 554-571.
